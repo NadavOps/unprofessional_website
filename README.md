@@ -11,6 +11,6 @@ fqdn                         = "example.com"
 copy_website_content_enabled = true
 ```
 
-* Before running terraform apply, copy the site files into the folder ./assets/ignored_website_content
+* Before running terraform apply, copy or link the site files into the folder ./assets/ignored_website_content
 
-* After running terraform apply point fqdn to the public ip
+* After running terraform apply, point fqdn to the public ip
