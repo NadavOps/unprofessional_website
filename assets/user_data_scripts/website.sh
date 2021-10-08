@@ -55,10 +55,10 @@ EOF
 
 cat << 'EOF' > /etc/nginx/sites-available/default
 server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+	listen 80;
+	listen [::]:80;
 	server_name ${tf_fqdn};
-	return 301 https://$host$request_uri;
+	return 301 https://$server_name$request_uri;
 }
 
 server {
