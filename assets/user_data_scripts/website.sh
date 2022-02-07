@@ -114,6 +114,7 @@ while [[ $? != 0 ]]; do
     sleep 3600
     certbot renew
 done
+systemctl reload nginx
 bash /root/certbot_expiration_date.sh
 EOF
 
