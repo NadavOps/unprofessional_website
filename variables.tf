@@ -35,7 +35,7 @@ variable "instance_type" {
 variable "ssh_allowed_ips" {
   description = "The IPs allowed to ssh into the website EC2. Defaults to all"
   type        = list(string)
-  default     = null
+  default     = []
 }
 
 variable "copy_website_content_enabled" {

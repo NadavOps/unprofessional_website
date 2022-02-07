@@ -35,7 +35,7 @@ module "security_groups" {
 }
 
 resource "aws_security_group_rule" "website_ssh" {
-  count             = var.ssh_allowed_ips != null ? 1 : 0
+  count             = length(var.ssh_allowed_ips) > 0 ? 1 : 0
   security_group_id = module.security_groups["website"].sg_id
   type              = "ingress"
   from_port         = 22
